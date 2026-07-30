@@ -7,7 +7,7 @@ que mantém seu login e suas permissões atuais.
 ## Publicação no Render
 
 1. Crie um **Static Site** no Render a partir deste repositório.
-2. Defina o diretório raiz como `portal-acesso-ji`.
+2. Use a raiz do repositório como diretório raiz (deixe o campo em branco).
 3. Use `render.yaml` ou configure `Publish Directory` como `.`.
 4. Não é necessário incluir variáveis de ambiente ou Supabase.
 
