@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
     <main>
       <section class="hero" aria-labelledby="portal-title">
-        <img class="hero-image" src="assets/fachada-ji.jpg" alt="Fachada da JI Montadora de Veículos Especiais">
+        <img class="hero-image" src="assets/fachada-ji.jpg" alt="Fachada da JI Montadora de Veículos Especiais" data-parallax="hero">
         <div class="hero-shade"></div>
         <header class="brand">
           <span class="brand-mark">JI</span>
           <span class="brand-name">Montadora</span>
           <span class="brand-subtitle">veículos especiais</span>
         </header>
-        <div class="hero-content">
+        <div class="hero-content" data-intro-group>
           <p class="eyebrow">Portal operacional</p>
           <h1 id="portal-title">Acesse os módulos<br>da operação.</h1>
           <p class="hero-copy">Um ponto de entrada simples para a gestão integrada de cadastros, compras, PCP e produção.</p>
@@ -28,13 +29,13 @@
       </section>
 
       <section id="modulos" class="modules" aria-labelledby="modules-title">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <p class="eyebrow dark">Ambiente JI</p>
           <h2 id="modules-title">Módulos de trabalho</h2>
           <p>Selecione a área conforme sua atividade. O acesso e as permissões continuam sendo definidos dentro de cada módulo.</p>
         </div>
 
-        <nav class="module-grid" aria-label="Módulos operacionais">
+        <nav class="module-grid" aria-label="Módulos operacionais" data-reveal-group>
           <a class="module-card card-cadastros" href="https://modulocadastro.onrender.com/">
             <span class="module-number">01</span>
             <span class="module-label">Base operacional</span>
@@ -81,13 +82,16 @@
       </section>
 
       <section class="closing" aria-label="JI Montadora">
-        <img src="assets/ambiente-ji.jpg" alt="Ambiente interno da JI Montadora">
-        <div class="closing-copy">
+        <img src="assets/ambiente-ji.jpg" alt="Ambiente interno da JI Montadora" data-parallax="closing">
+        <div class="closing-copy" data-reveal>
           <p class="eyebrow">JI Montadora</p>
           <p>Transformando processos em veículos especiais.</p>
         </div>
       </section>
     </main>
-    <footer>JI Montadora de Veículos Especiais · Portal Operacional</footer>
+    <footer data-reveal>JI Montadora de Veículos Especiais · Portal Operacional</footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="site.js" defer></script>
   </body>
 </html>
