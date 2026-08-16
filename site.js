@@ -68,6 +68,43 @@
     }
   );
 
+  gsap.utils.toArray("[data-section]").forEach((section) => {
+    gsap.fromTo(
+      section,
+      { backgroundPositionY: "14px" },
+      {
+        backgroundPositionY: "0px",
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.8
+        }
+      }
+    );
+  });
+
+  gsap.utils.toArray(".module-card").forEach((card, index) => {
+    gsap.fromTo(
+      card,
+      { y: 18, rotateX: 2, transformPerspective: 900 },
+      {
+        y: 0,
+        rotateX: 0,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 96%",
+          end: "top 66%",
+          scrub: reduceMotion ? false : 0.55,
+          invalidateOnRefresh: true
+        },
+        delay: reduceMotion ? 0 : index * 0.02
+      }
+    );
+  });
+
   if (!reduceMotion) {
     gsap.to('[data-parallax="hero"]', {
       yPercent: 8,
